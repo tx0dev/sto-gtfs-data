@@ -1,0 +1,18 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station
+
+
+
+
+
+rapibus_tache,,Station Taché-UQO,,45.423808,-75.73202,,,1,
+rapibus_montcalm,,Station Montcalm,45.4305,-75.7293,,,1,
+rapibus_galeries,,Station Les Galeries de Hull,,45.441884,-75.728081,,,1,
+rapibus_casino,,Station Casino,,45.445875,-75.727765,,,1,
+rapibus_leamy,,Station Lac-Leamy,,45.451927,-75.729296,,,1,
+rapibus_gappe,,Station De La Gappe,,45.469133,-75.716229,,,1,
+rapibus_promenades,,Station Les Promenades,,45.477937,-75.697040,,,1,
+rapibus_cite,,Station De La Cité,,45.481304,-75.683179,,,1,
+rapibus_gouin,,Station Gouin,,45.486221,-75.661574,,,1,
+rapibus_labrosse,,Station Labrosse,,45.490605,-75.643020,,,1,
+rapibus_freeman,,Station Freeman,,45.473451,-75.741165,,,1,
+rapibus_rivermead,Terminus Rivermead,45.404414,-75.793756,,,1,
