@@ -6,7 +6,8 @@ import urllib2
 URL="http://m.sto.ca/fr/horaires/resultats/?action=getCompletePassingTimes&stop=:1097&route=51_P-O-B+RIVERMEAD&date=2013-10-30"
 
 print "## Opening URL"
-rawStop=urllib2.urlopen(URL).read()
+#rawStop=urllib2.urlopen(URL).read()
+rawStop=open("horairesjson")
 print "## Parsing page"
 stopSoup = BeautifulSoup(rawStop)
 times = stopSoup.findAll("div", attrs={"class" : "timeHoraire"})
