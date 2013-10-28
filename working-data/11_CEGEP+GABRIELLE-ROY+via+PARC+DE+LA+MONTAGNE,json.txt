@@ -1,0 +1,256 @@
+[{
+	"Identifier": ":5014",
+	"Description": "RIDEAU\/CUMBERLAND nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": true,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":5022",
+	"Description": "RIDEAU\/SUSSEX nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":5030",
+	"Description": "RIDEAU\/ELGIN nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":5034",
+	"Description": "WELLINGTON\/METCALFE nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":5042",
+	"Description": "WELLINGTON\/BANK nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":5050",
+	"Description": "WELLINGTON\/LYON nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2722",
+	"Description": "PLACE d'ACCUEIL est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": true,
+	"PhoneNumber": "8326"
+},
+{
+	"Identifier": ":2596",
+	"Description": "MAISONNEUVE\/PAPINEAU est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": "8326"
+},
+{
+	"Identifier": ":2692",
+	"Description": "MAISONNEUVE\/des ALLUMETTI\u00c8RES est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": "8400"
+},
+{
+	"Identifier": ":2695",
+	"Description": "MAISONNEUVE\/VERDUN est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": "8400"
+},
+{
+	"Identifier": ":2404",
+	"Description": "SAINT-RAYMOND\/ROY nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": true,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2410",
+	"Description": "SAINT-RAYMOND\/L\u00c9VESQUE nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2412",
+	"Description": "SAINT-RAYMOND\/LAROSE nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2288",
+	"Description": "SAINT-RAYMOND\/CORBEIL nord",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2292",
+	"Description": "CORBEIL\/BRIGHAM est",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2294",
+	"Description": "CORBEIL\/FR\u00c9CHETTE est",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2302",
+	"Description": "CORBEIL\/BRADY est",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2303",
+	"Description": "TH\u00c9RIEN\/B\u00c9DARD nord",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2267",
+	"Description": "B\u00c9DARD\/TH\u00c9RIEN est",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2262",
+	"Description": "RIEL\/CHOUINARD est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2258",
+	"Description": "RIEL\/CHOUINARD est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2254",
+	"Description": "RIEL\/du MONT-BLEU est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2246",
+	"Description": "RIEL\/de l'ESCALIER est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2242",
+	"Description": "RIEL\/de SAINT-BRIEUC est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2238",
+	"Description": "RIEL\/MARCOUX est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2234",
+	"Description": "RIEL\/TALBOT est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2226",
+	"Description": "RIEL\/du RAVIN-BLEU est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2224",
+	"Description": "RIEL\/de la CIT\u00c9-DES-JEUNES est",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2187A",
+	"Description": "de la CIT\u00c9-DES-JEUNES\/TALBOT ouest",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2192A",
+	"Description": "de la CIT\u00c9-DES-JEUNES\/TALBOT ouest",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2194A",
+	"Description": "de la CIT\u00c9-DES-JEUNES\/du MONT-BLEU ouest",
+	"IsPublic": true,
+	"IsAccessible": false,
+	"IsAtTimingPoint": false,
+	"PhoneNumber": ""
+},
+{
+	"Identifier": ":2008A",
+	"Description": "CEGEP GABRIELLE-ROY\/arriv\u00e9e",
+	"IsPublic": true,
+	"IsAccessible": true,
+	"IsAtTimingPoint": true,
+	"PhoneNumber": ""
+}]
