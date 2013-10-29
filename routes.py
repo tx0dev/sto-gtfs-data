@@ -2,44 +2,41 @@
 # -*- coding: utf-8 -*-
 import urllib2
 import json
+import logging
+
+# Logging
+logger = logging.getLogger("routes")
+logger.setLevel(logging.INFO)
+
+file_log = logging.FileHandler("routes.log")
+logger.addHandler(file_log)
+std_log = logging.StreamHandler()
+logger.addHandler(std_log)
+
+# Prettify log
+formatter = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
+file_log.setFormatter(formatter)
 
 # Base URL
 URL_ROUTE="http://m.sto.ca/fr/horaires/?action=getRoutes&date=%s"
-URL_STOP="http://m.sto.ca/fr/horaires/?action=getStops&date=%s&time=%s&route=%s"
 
 # Variable
-DATE="2013-10-28"
-TIME = "12%3A00+AM"
-ROUTE = "11_C%C3%89GEP+GABRIELLE-ROY+via+PARC+DE+LA+MONTAGNE"
+DATE="2013-11-02"
 
-stops= {}
+logger.info("======= NEW RUN =======")
 
 get_route = URL_ROUTE % (DATE,)
-get_stop = URL_STOP % (DATE,TIME,ROUTE)
 
-# building the list for a Sunday
+# building the list for a give DATE.
 
-print "## Opening route URL"
-#rawRoute=urllib2.urlopen(get_route).read()
-# Debug, using local file
+logger.info("Opening route URL")
+rawRoute=urllib2.urlopen(get_route).read()
 
-rawRoute=open("horaire.json")
+logger.info("Parsing JSON")
 
-print "## Parsing JSON"
+routes = json.loads(rawRoute)
 
-data = json.load(rawRoute)
-
-print "## Evaluation"
-for d in data:
-    id = d['Identifier'].replace(':','')
-
-    if id not in stops:
-        print "ADDING", id
-        stops[id] = {"stop_name": d['Description'], }
-    else:
-        print "SKIP  ", id
-
-
-# Print Result
-print "## RAW OUTPUT"
-print stops
+logger.info("Saving file")
+with open("routes-%s.json" % (DATE,), "w") as f:
+    f.write(json.dumps(routes["RouteDirection"], sort_keys=True, indent=2, separators=(',', ': ')))
+print "There is %s routes for %s" % (len(routes["RouteDirection"]), DATE)
