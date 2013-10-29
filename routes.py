@@ -29,7 +29,7 @@ get_route = URL_ROUTE % (DATE,)
 
 # building the list for a give DATE.
 
-logger.info("Opening route URL")
+logger.info("Opening route URL for date %s", DATE)
 rawRoute=urllib2.urlopen(get_route).read()
 
 logger.info("Parsing JSON")
@@ -37,6 +37,7 @@ logger.info("Parsing JSON")
 routes = json.loads(rawRoute)
 
 logger.info("Saving file")
-with open("routes-%s.json" % (DATE,), "w") as f:
+with open("working-data/routes-%s.json" % (DATE,), "w") as f:
     f.write(json.dumps(routes["RouteDirection"], sort_keys=True, indent=2, separators=(',', ': ')))
-print "There is %s routes for %s" % (len(routes["RouteDirection"]), DATE)
+
+logger.info("process complete, %s route saved", len(routes["RouteDirection"]))
