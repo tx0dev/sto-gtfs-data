@@ -3,9 +3,22 @@
 import urllib2
 import json
 import time
+import logging
+
+# Logging
+logger = logging.getLogger("stops")
+logger.setLevel(logging.DEBUG)
+
+file_log = logging.FileHandler("stops.log")
+logger.addHandler(file_log)
+std_log = logging.StreamHandler()
+logger.addHandler(std_log)
+
+# Prettify log
+formatter = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
+file_log.setFormatter(formatter)
 
 # Base URL
-URL_ROUTE="http://m.sto.ca/fr/horaires/?action=getRoutes&date=%s"
 URL_STOP="http://m.sto.ca/fr/horaires/?action=getStops&date=%s&time=%s&route=%s"
 
 # Variable
@@ -24,17 +37,17 @@ print """WARNING!!!
 This will hit the STO website for each route and it takes quite some time.
 #### DO NOT RUN DURING THE DAY. ####
 Are you sure you want to continue?"""
-if raw_input("yes/no?") == "yes":
+if raw_input("yes/no? ") == "yes":
     print "okay then... starting"
-    print "There is", len(routes), "routes to process"
+    logger.info("There is %s routes to process", len(routes))
     time.sleep(2)
 else:
-    print "exiting..."
+    logger.info("exiting...")
     exit()
 
 # Well... Starting route loop
 for route in routes:
-    print "Processing route",route["PublicIdentifier"], route["Description"], route["Direction"]
+    logger.info("Processing route %s %s %s",route["PublicIdentifier"], route["Description"], route["Direction"])
 
     r = "%s_%s" % (route["PublicIdentifier"], route["DirectionName"])
     get_stop = URL_STOP % (DATE, TIME, r)
@@ -42,17 +55,16 @@ for route in routes:
     # don't ask about the replace
     url = urllib2.quote(get_stop.encode("utf8"), ":/;?&=%").replace("%27","%2527")
 
-    print "URL:", url
-    print "Loading..."
+    logger.debug("URL: %s", url)
     u = urllib2.urlopen(url)
 
     # If there is a malform URL it fail
     if u.geturl() == "http://m.sto.ca/fr/maintenance/":
-        print "Site maintenance or something broke..."
+        logger.warning("Site maintenance or something broke...")
         exit()
     rawStop = u.read()
 
-    print "Parsing json and checking for existing stops"
+    logger.info("Parsing json and checking for existing stops")
     data = json.loads(rawStop)
 
     # Add the stop to the common array
@@ -67,20 +79,18 @@ for route in routes:
                 found = True
                 stopSkipped = stopSkipped + 1
         if found:
-            print "%s-E" % (id,),
+            logger.debug("Stop %s exist, skipped", id)
         else:
-            print "%s-A" % (id,),
+            logger.debug("Stop %s added",id)
             stops.append(d)
             stopAdded = stopAdded + 1
-    print ""
-    print "## Progress"
-    print "Stops:", len(stops), "(%s added, %s skipped)" % (stopAdded, stopSkipped)
-    print "Route: index ", routes.index(route), "of", len(routes)
+    logger.info("Progress: Stop=%s (%s added, %s skipped) | Route: index %s of %s",
+                len(stops), stopAdded, stopSkipped, routes.index(route), len(routes))
     time.sleep(1)
 
 # Write result to a file
-print "Complete!, Writing result to file"
-with open("stops.json", "w") as f:
+logger.info("Complete!, Writing result to file")
+with open("working-data/stops.json", "w") as f:
     f.write(json.dumps(stops, sort_keys=True, indent=2, separators=(',', ': ')))
     f.close()
-print "There is", len(stops), "stops in total"
+logger.info("There is %s stops", len(stops))
