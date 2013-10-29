@@ -1,5 +1,6 @@
 #!/usr/bin/python
-from BeautifulSoup import BeautifulSoup                                                                                                  
+# -*- coding: utf-8 -*-
+from BeautifulSoup import BeautifulSoup
 import urllib2
 
 
