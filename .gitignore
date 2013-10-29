@@ -38,3 +38,6 @@ nosetests.xml
 
 # Logs
 *.log
+
+# Windows things
+Thumbs.db
