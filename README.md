@@ -12,7 +12,7 @@ Scripts
 routes.py
 ---------
 
-Will download the route information. Still working out how to get it to work correctly
+Will download the route information. 
 
 stops.py
 --------
@@ -22,9 +22,13 @@ Used the json file created by the `route.py` to get all the stops in the network
 times.py
 --------
 
-Gather the stop time for a given route at a given stop.
+Gather the stop time for a given route at all given stop.
 
-It parse the html using BeautifulSoup
+It parse the html using BeautifulSoup so it require 3 bit of information:
+
+- date: the ISO formatted date: 2013-10-29
+- A stop id from the stops.py data with a leading colon: :1097
+- A route string from the data gathered by the route.py
 
 Copyright
 =========
