@@ -125,7 +125,7 @@ logger.info("Process complete")
 print "#############################"
 for r in routeInfos:
     print "%(stop)s (#%(infobus)s)," % r,
-
+print ""
 for i in xrange(len(routeTimes)):
     for t in routeTimes:
         print "%s," % (t[i], ),
